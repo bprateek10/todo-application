@@ -1,0 +1,21 @@
+default: &default
+  adapter: YOUR DATABASE ADAPTER
+  host: localhost
+  encoding: utf8
+  username: YOUR DATABASE USERNAME
+  password: YOUR DATABASE PASSWORD
+  pool: <%= ENV.fetch('RAIS_MAX_THREADS') {5} %>
+  timeout: 5000
+  
+development:
+  <<: *default
+  database: YOUR DEVELOPMENT DATABASE NAME
+
+test:
+  <<: *default
+  database: YOUR TEST DATABASE NAME
+
+production:
+  <<: *default
+  database: YOUR PRODUCTION DATABASE NAME
+ 
