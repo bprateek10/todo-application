@@ -1,1 +1,12 @@
-asdsadas
+.row
+  .col-md-10
+    %table.table.table-striped.table-bordered.table-hover.table-condensed
+      %thead
+        %tr
+          %th Task
+          %th Due Date
+          %th Completed Date
+          %th Actions
+      %tbody#todo_items{"data-url" => sort_todo_items_path}
+        = render @todo_items
+    = render 'form'

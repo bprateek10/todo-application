@@ -1,0 +1,4 @@
+<% if @todo_item.persisted? %>
+  $('#todo_items').html("<%= j render @todo_items %>");
+  $(".new-todo-form")[0].reset();
+<% end %>

@@ -1,0 +1,11 @@
+%tr{id: dom_id(todo_item), :class => "#{todo_item.completed? ? 'completed-item': ''}"}
+	%td=todo_item.description
+	%td=todo_item.due_date.present? ? todo_item.due_date.strftime('%d %b, %Y') : ''
+	%td.completed-date=todo_item.completed_at.present? ? todo_item.completed_at.strftime('%d %b, %Y') : ''
+	%td
+		- if todo_item.completed?
+			= link_to "Completed", "#", class: 'btn btn-success btn-sm mar-l-10 disabled-link'
+			= link_to "Delete", "#", class: 'btn btn-danger btn-sm mar-l-10 disabled-link'
+		- else
+			= link_to "Mark Completed", "#", data: {url: complete_todo_item_path(todo_item)}, class: 'mark-complete btn btn-info btn-sm mar-l-10 action-button'
+			= link_to "Delete", todo_item_path(todo_item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm mar-l-10 action-button'

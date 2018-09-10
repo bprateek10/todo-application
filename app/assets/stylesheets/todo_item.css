@@ -1,0 +1,14 @@
+table{
+  width: 100%;
+  margin: 50px;
+}
+
+.disabled-link{
+  pointer-events: none;
+  cursor: default !important;
+  text-decoration: none !important;
+}
+
+.completed-item{
+  opacity: 0.5;
+}

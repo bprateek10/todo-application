@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   #Associations
-  has_many :todo_items
+  has_many :todo_items, -> { order(position: :asc) }
 end
