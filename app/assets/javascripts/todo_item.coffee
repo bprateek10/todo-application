@@ -5,7 +5,6 @@ $(document).on 'turbolinks:load', ->
 		minDate : +0
 
 	$('#todo_items').sortable update: (e, ui) ->
-		console.log "hello"
 		$.ajax
 			beforeSend: (xhr) ->
 				xhr.setRequestHeader 'X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')
