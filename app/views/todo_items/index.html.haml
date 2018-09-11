@@ -9,4 +9,6 @@
           %th Actions
       %tbody#todo_items{"data-url" => sort_todo_items_path}
         = render @todo_items
+    - if @todo_items.blank?
+      .no-tasks No Tasks Added yet, Add one now!!
     = render 'form'

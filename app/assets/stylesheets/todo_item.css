@@ -18,3 +18,7 @@ table{
   font-style: italic;
   font-size: 15px;
 }
+
+.no-tasks{
+  text-align: center;
+}
