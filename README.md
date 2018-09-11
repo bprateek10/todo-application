@@ -12,3 +12,5 @@ Setting up Project:
 5. Now, run migrations using rake db:migrate. 
 6. Run rails server by using following command : rails s , this will start your rails server in development mode 
 7. Now open localhost:3000 to access your application in browser
+
+This application is running on heroku , you can check it out at https://demo-todo-application.herokuapp.com
