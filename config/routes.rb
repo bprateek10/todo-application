@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   end
 
   resources :user , only: [] do
-    resources :todo_items, only: [:index, :new, :create] 
+    resources :todo_items, only: [:index, :create] 
   end
 
-  resources :todo_items, only: [:show, :edit, :update, :destroy]  do
+  resources :todo_items, only: [:destroy]  do
     collection do
       patch :sort
     end
