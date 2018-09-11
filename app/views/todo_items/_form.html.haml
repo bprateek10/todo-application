@@ -1,9 +1,9 @@
 .new-task-section.p-5
   %h5 Add new Task
-  = form_with(model: TodoItem.new(), url: user_todo_items_path(current_user), html: {class: 'form-inline new-todo-form'}) do |f|
+  = form_with(model: TodoItem.new(), url: user_todo_items_path(current_user), html: {class: ' new-todo-form'}) do |f|
     .form-group.mr-3
-      = f.text_field :description, placeholder: "New Todo", class: 'form-control'
+      = f.text_field :description, placeholder: "New Todo", class: 'form-control col-md-6'
     .form-group.mr-3
-      = f.text_field :due_date, placeholder: 'Due Date', class: "form-control datepicker", readonly: true
+      = f.text_field :due_date, placeholder: 'Due Date', class: "form-control datepicker col-md-6", readonly: true
     .form-group.mr-3
-      = f.submit "Add" , class: 'form-control btn btn-primary'
+      = f.submit "Add" , class: 'form-control btn btn-primary col-md-6'

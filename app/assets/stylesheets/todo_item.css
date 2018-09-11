@@ -12,3 +12,9 @@ table{
 .completed-item{
   opacity: 0.5;
 }
+
+.field-error{
+  color: red;
+  font-style: italic;
+  font-size: 15px;
+}

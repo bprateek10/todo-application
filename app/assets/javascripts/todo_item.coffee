@@ -28,3 +28,12 @@ $(document).on 'turbolinks:load', ->
 				$(window.currentElement.closest("td")).children().addClass('disabled-link')
 				$(window.currentElement.closest("tr")).addClass("completed-item")
 				window.currentElement = null
+	
+	$('.new-todo-form').validate
+		onkeyup: false
+		errorElement: 'div'
+		errorClass: 'field-error'
+		rules:
+			'todo_item[description]': required: true
+		messages:
+			'todo_item[description]': required: 'Please enter the task to add'
